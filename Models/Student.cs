@@ -7,7 +7,7 @@ namespace MvcUniversity.Models
     public class Student
     {
         public int Id { get; set; }
-        
+
         [Display(Name = "Last Name"), Required]
         public string LastName { get; set; }
 
@@ -16,6 +16,8 @@ namespace MvcUniversity.Models
 
         [Display(Name ="Enrollment Date"), DataType(DataType.Date)]
         public DateTime EnrollmentDate { get; set; }
+        
+        [Display(Name ="Enrollments")]
         public ICollection<Enrollment> Enrollments { get; set; }
     }
 }
